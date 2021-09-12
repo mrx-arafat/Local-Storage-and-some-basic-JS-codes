@@ -13,11 +13,18 @@ const addToLocalStorage = () => {
 
   strorageID.value = "";
   strorageValue.value = "";
-
-  /// if we want to add an array then we will think about JSON stringify
-
-  localStorage.setItem(
-    "Arafat GF List",
-    JSON.stringify(["Emma Watson", "Tasnim The Great", " Ivanka Trump"])
-  );
 };
+
+/// if we want to add an array or object then we will think about JSON stringify
+//array
+localStorage.setItem(
+  "Arafat GF List",
+  JSON.stringify(["Emma Watson", "Tasnim The Great", " Ivanka Trump"])
+);
+
+localStorage.setItem("GF Spends", JSON.stringify([200000, 10000, 5000000]));
+//object
+
+const person = { name: "Ivanka Trump", spend: 5000000, BF: "Arafat xD" };
+
+localStorage.setItem("person", JSON.stringify(person));
